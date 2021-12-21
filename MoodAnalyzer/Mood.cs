@@ -4,18 +4,19 @@ namespace MoodAnalyzer
 {
     public class Mood
     {
-        static void Main(string[] args)
+        public string AnalyzeMood(string Message)
         {
-
-        }
-        
-        public string AnalyzeMood(String Message)
-        {
-            string mood;
-            if (Message.Contains("Sad"))
-                return mood = "Sad";
-            else
+            try
+            {
+                if (Message.Contains("Sad"))
+                    return "Sad";
+                else
+                    return "Happy";
+            }
+            catch
+            {
                 return "Happy";
+            }
         }
     }
 }
